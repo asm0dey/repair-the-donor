@@ -8,7 +8,6 @@ export (String) var organ_name
 export (Type) var type
 
 var dragging = false
-var alive = true
 var death_printed = false
 
 signal organ_taken(organ, event)
@@ -16,7 +15,7 @@ signal organ_released(organ, event)
 
 func _process(_delta):
 	if time_left <= 0:
-		alive = false
+		input_pickable = false
 		if !death_printed:
 			print(organ_name + " is dead")
 			death_printed = true
@@ -25,7 +24,7 @@ func _process(_delta):
 		set_position(get_viewport().get_mouse_position())
 
 func _on_Organ_input_event(_viewport, event, _shape_idx):
-	if alive && event is InputEventMouseButton:
+	if event is InputEventMouseButton:
 		if event.is_pressed():
 			emit_signal("organ_taken", self, event)
 			dragging = true
