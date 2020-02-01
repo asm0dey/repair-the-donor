@@ -33,10 +33,12 @@ scale = Vector2( 1.6, 1.6 )
 [node name="RLung" parent="Human1" instance=ExtResource( 8 )]
 position = Vector2( -71.1951, -147.924 )
 scale = Vector2( 1.5, 1.5 )
+organ_name = "Right Lung"
 
 [node name="Left Lung" parent="Human1" instance=ExtResource( 5 )]
 position = Vector2( 86.1624, -144.023 )
 scale = Vector2( 1.5, 1.5 )
+organ_name = "Left Lung"
 
 [node name="Hepar" parent="Human1" instance=ExtResource( 7 )]
 position = Vector2( -40.251, 21.3834 )
@@ -45,6 +47,7 @@ scale = Vector2( 1.6, 1.6 )
 [node name="LKidney" parent="Human1" instance=ExtResource( 6 )]
 position = Vector2( -54.4681, 140.781 )
 scale = Vector2( 1.2, 1.2 )
+organ_name = "Left Kidney"
 
 [node name="RKidney" parent="Human1" instance=ExtResource( 9 )]
 position = Vector2( 71.0683, 135.847 )
