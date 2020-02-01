@@ -1,25 +1,14 @@
 extends StaticBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 export (int) var size
+var _mouse_in = false
+export (String) var container_name = "bed"
+
+func _organ_taken(organ, _event):
+	if _mouse_in:
+		print("organ " + organ.organ_name + " is get of " + container_name)
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _try_detach(organ):
-	pass
-
-func _try_attach(organ):
-	pass
+func _organ_released(organ, _event):
+	if _mouse_in:
+		print("organ " + organ.organ_name + " is put on " + container_name)
