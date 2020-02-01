@@ -25,6 +25,15 @@ func assign_organs():
 		for organ in organs:
 			bed.places[organ.type] = organ.position
 
+func count_alive_organs():
+	var alive_organs = 0
+	for group in ["b1","b2"]:
+		for obj in get_tree().get_nodes_in_group(group):
+			if obj is KinematicBody2D:
+				if obj.state != obj.State.DEAD:
+					alive_organs += 1
+	return alive_organs
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	if randf() > 0.7:
@@ -34,4 +43,5 @@ func _on_HealthUpdateTimer_timeout():
 	$GUI/HBoxContainer/Bars/Bar/Count/Background/Number.text = "%s" % rand_val
 	$GUI/HBoxContainer/Bars/Bar/Gauge.value = rand_val * 10
 	
-	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % (10 - rand_val)
+	var num_alive_organs = count_alive_organs()
+	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs
