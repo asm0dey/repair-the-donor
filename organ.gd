@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
 enum State {GOOD, BAD, UGLY, DEAD}
-
+enum Type {HEART, LEFT_LUNG, RIGHT_LUNG, LEFT_KIDNEY, RIGHT_KIDNEY, HEPAR}
 export (State) var state
 export (float) var time_left
 export (String) var organ_name
+export (Type) var type
 
 var dragging = false
 var alive = true
@@ -13,7 +14,7 @@ var death_printed = false
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
 
-func _process(delta):
+func _process(_delta):
 	if time_left <= 0:
 		alive = false
 		if !death_printed:
@@ -23,7 +24,7 @@ func _process(delta):
 	if dragging:
 		set_position(get_viewport().get_mouse_position())
 
-func _on_Organ_input_event(viewport, event, shape_idx):
+func _on_Organ_input_event(_viewport, event, _shape_idx):
 	if alive && event is InputEventMouseButton:
 		if event.is_pressed():
 			emit_signal("organ_taken", self, event)
@@ -32,6 +33,6 @@ func _on_Organ_input_event(viewport, event, shape_idx):
 			emit_signal("organ_released", self, event)
 			dragging = false
 
-func _set_state(state):
+func _set_state(_state):
 	pass
 

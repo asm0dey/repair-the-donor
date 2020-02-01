@@ -6,9 +6,10 @@ export (String) var container_name
 export (float) var decrement_per_iteration = 0.3
 var organs = []
 
-func _process(delta):
+func _process(_delta):
 	for organ in organs:
-		organ.time_left -= decrement_per_iteration
+		if organ.time_left > 0:
+			organ.time_left -= decrement_per_iteration
 
 func _organ_taken(organ, _event):
 	if _mouse_in:

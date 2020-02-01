@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/сердце.png-73c146609c51fd0c43d73c93632a8fc9.stex"
+path="res://.import/llung-o.png-ca8f9c24977b8a9f52161812266f7d21.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://organs/сердце.png"
-dest_files=[ "res://.import/сердце.png-73c146609c51fd0c43d73c93632a8fc9.stex" ]
+source_file="res://organs/llung-o.png"
+dest_files=[ "res://.import/llung-o.png-ca8f9c24977b8a9f52161812266f7d21.stex" ]
 
 [params]
 
