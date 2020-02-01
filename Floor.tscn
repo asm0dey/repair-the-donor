@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://floor.jpg" type="Texture" id=1]
 [ext_resource path="res://Heart.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://RLung.tscn" type="PackedScene" id=8]
 [ext_resource path="res://RKidney.tscn" type="PackedScene" id=9]
 [ext_resource path="res://organ.gd" type="Script" id=10]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 4 )
@@ -124,3 +125,7 @@ position = Vector2( 658.774, 689.957 )
 scale = Vector2( 0.6, 0.6 )
 state = 1
 time_left = 80.0
+
+[node name="GUI" parent="." instance=ExtResource( 11 )]
+margin_right = 1600.0
+margin_bottom = 168.0
