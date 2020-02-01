@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/печень (ор).png-15089c3d6c4be39cd1bf06a8cc7d23cd.stex"
+path="res://.import/hepar-r.png-1a39f53370fb6b23b65b5094f3c52f55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://organs/печень (ор).png"
-dest_files=[ "res://.import/печень (ор).png-15089c3d6c4be39cd1bf06a8cc7d23cd.stex" ]
+source_file="res://organs/hepar-r.png"
+dest_files=[ "res://.import/hepar-r.png-1a39f53370fb6b23b65b5094f3c52f55.stex" ]
 
 [params]
 
