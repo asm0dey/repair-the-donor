@@ -5,20 +5,21 @@ env:
   # Use this to set your game's name. It is being used
   # throughout this file for naming exported artifacts.
   # This will, for example, create an "HareDerLage.exe"
-  - GAME_NAME="Repair the Donor"
+  - GAME_NAME="repair"
 
 install:
-- docker pull gamedrivendesign/godot-export
+- docker pull barichello/godot-ci
 
 # Each of the following lines exports the game for a given platform.
 # You can specify the platform in the EXPORT_NAME variable
 # The exported game will be written to the folder specified after the second "-v" flag
 # "-v $(pwd)/output/html5:/build/output" writes the exported game to  the "output/html5" folder.
 script:
-- docker run -e EXPORT_NAME="HTML5"           -e OUTPUT_FILENAME="index.html"           -v $(pwd):/build/src -v $(pwd)/output/html5:/build/output   gamedrivendesign/godot-export
-- docker run -e EXPORT_NAME="Linux/X11"       -e OUTPUT_FILENAME="${GAME_NAME}"         -v $(pwd):/build/src -v $(pwd)/output/linux:/build/output   gamedrivendesign/godot-export
-- docker run -e EXPORT_NAME="Windows Desktop" -e OUTPUT_FILENAME="${GAME_NAME}.exe"     -v $(pwd):/build/src -v $(pwd)/output/windows:/build/output gamedrivendesign/godot-export
-- docker run -e EXPORT_NAME="Mac OSX"         -e OUTPUT_FILENAME="${GAME_NAME}-mac.zip" -v $(pwd):/build/src -v $(pwd)/output/mac:/build/output     gamedrivendesign/godot-export
+- mkdir -p output/html5 output/linux output/windows output/mac
+- docker run -v $(pwd):/build/src -v $(pwd)/output/html5:/build/output   -w /build/src barichello/godot-ci godot --export HTML /build/output/html/index.html
+- docker run -v $(pwd):/build/src -v $(pwd)/output/linux:/build/output   -w /build/src barichello/godot-ci godot --export 'Linux/X11' /build/output/linux/repair
+- docker run -v $(pwd):/build/src -v $(pwd)/output/windows:/build/output -w /build/src barichello/godot-ci godot --export Windows /build/output/windows/repair.exe
+- docker run -v $(pwd):/build/src -v $(pwd)/output/mac:/build/output     -w /build/src barichello/godot-ci godot --export Mac /build/output/mac/repair-mac.zip
 
 # Now comes deployment related code.
 # To make this work, you need to set a GITHUB_TOKEN environment variable through
