@@ -16,5 +16,6 @@ func place_organ(organ:KinematicBody2D):
 			_reject_organ(organ)
 			return
 	organ.set_position(places[organ.type])
+	organ.default_position = organ.position
 	organs.append(organ)
 	print("Putting organ type %s to position %s" % [organ.type, places[organ.type]] )
