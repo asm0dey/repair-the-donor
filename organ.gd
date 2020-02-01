@@ -13,13 +13,13 @@ var death_printed = false
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
 
-func _physics_process(delta):
+func _process(_delta):
 	if time_left <= 0:
 		input_pickable = false
 		if !death_printed:
 			print(organ_name + " is dead")
 			death_printed = true
-			_set_state(State.DEAD)
+			state = State.DEAD
 	if dragging:
 		set_position(get_viewport().get_mouse_position())
 
@@ -31,7 +31,3 @@ func _on_Organ_input_event(_viewport, event, _shape_idx):
 		else:
 			emit_signal("organ_released", self, event)
 			dragging = false
-
-func _set_state(_state):
-	pass
-

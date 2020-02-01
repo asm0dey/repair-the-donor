@@ -22,6 +22,8 @@ func assign_organs():
 			elif obj is KinematicBody2D:
 				organs.append(obj)
 		bed.organs = organs
+		for organ in organs:
+			bed.places[organ.type] = organ.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
