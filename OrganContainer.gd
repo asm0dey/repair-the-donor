@@ -13,8 +13,10 @@ func _process(_delta):
 
 func _organ_taken(organ, _event):
 	if _mouse_in:
-		organs.remove(organs.find(organ))
-		print("organ " + organ.organ_name + " is got of " + container_name)
+		var i = organs.find(organ)
+		if i >= 0:
+			organs.remove(i)
+			print("organ " + organ.organ_name + " is got of " + container_name)
 
 
 func _organ_released(organ, _event):

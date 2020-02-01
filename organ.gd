@@ -13,7 +13,7 @@ var death_printed = false
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
 
-func _process(_delta):
+func _physics_process(delta):
 	if time_left <= 0:
 		input_pickable = false
 		if !death_printed:

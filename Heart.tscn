@@ -13,6 +13,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+time_left = 500.0
 organ_name = "Heart"
 
 [node name="Sprite" type="Sprite" parent="."]
