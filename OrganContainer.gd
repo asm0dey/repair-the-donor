@@ -22,9 +22,11 @@ func _organ_taken(organ, _event):
 
 func _organ_released(organ, _event):
 	if _mouse_in:
-		organs.append(organ)
 		place_organ(organ)
 		print("organ " + organ.organ_name + " is put on " + container_name)
 
 func place_organ(_organ):
 	pass
+
+func _reject_organ(organ):
+	organ.position = organ.default_position

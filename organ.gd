@@ -10,8 +10,13 @@ export (Type) var type
 var dragging = false
 var death_printed = false
 
+var default_position: Vector2
+
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
+
+func _ready():
+	default_position = position
 
 func _process(_delta):
 	if time_left <= 0:
