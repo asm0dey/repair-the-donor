@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://floor.jpg" type="Texture" id=1]
+[ext_resource path="res://floor.png" type="Texture" id=1]
 [ext_resource path="res://Heart.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bed.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Level1.gd" type="Script" id=4]
@@ -14,12 +14,8 @@
 [node name="Level1" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="Floor" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="stock-photo-top-view-of-blood-red-spread-on-white-ground-1169468083" type="Sprite" parent="ParallaxBackground/Floor"]
-position = Vector2( 824, 607.186 )
+[node name="stock-photo-top-view-of-blood-red-spread-on-white-ground-1169468083" type="Sprite" parent="."]
+position = Vector2( 880, 498 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 1 )
 
