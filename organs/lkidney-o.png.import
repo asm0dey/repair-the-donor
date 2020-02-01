@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/почка1 (кр80).png-d46cf10dc9c2cbeaac1c45b112842605.stex"
+path="res://.import/lkidney-o.png-9fddc2f23917302bc19c5ba0e6deadb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://organs/почка1 (кр80).png"
-dest_files=[ "res://.import/почка1 (кр80).png-d46cf10dc9c2cbeaac1c45b112842605.stex" ]
+source_file="res://organs/lkidney-o.png"
+dest_files=[ "res://.import/lkidney-o.png-9fddc2f23917302bc19c5ba0e6deadb2.stex" ]
 
 [params]
 

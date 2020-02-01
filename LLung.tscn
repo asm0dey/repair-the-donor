@@ -26,6 +26,5 @@ visible = false
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PoolVector2Array( -20.4998, 48.2058, 12.7081, 62.3553, 31.4778, 63.5103, 36.6756, 58.0238, 40.1407, 28.2811, 33.2104, -12.146, 15.8845, -40.7336, -8.3717, -62.9685, -17.9009, -59.5033, -23.3875, -50.5516, -23.3875, -27.4505, -36.9594, -35.8246, -37.5369, -24.5628, -24.8313, -20.8089, -23.0987, 43.5856 )
 [connection signal="input_event" from="." to="." method="_on_Organ_input_event"]
