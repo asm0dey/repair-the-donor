@@ -129,3 +129,7 @@ time_left = 80.0
 [node name="GUI" parent="." instance=ExtResource( 11 )]
 margin_right = 1600.0
 margin_bottom = 168.0
+
+[node name="HealthUpdateTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]

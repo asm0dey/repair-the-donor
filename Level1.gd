@@ -27,4 +27,11 @@ func assign_organs():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
+#	if randf() > 0.7:
+
+func _on_HealthUpdateTimer_timeout():
+	var rand_val = randi() % 10 + 1
+	$GUI/HBoxContainer/Bars/Bar/Count/Background/Number.text = "%s" % rand_val
+	$GUI/HBoxContainer/Bars/Bar/Gauge.value = rand_val * 10
+	
+	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % (10 - rand_val)
