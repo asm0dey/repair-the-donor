@@ -41,12 +41,12 @@ organ_name = ""
 position = Vector2( 179.899, 423.701 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
-type = 1
+type = 3
 
 [node name="Left Lung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 5 )]
-position = Vector2( 254.674, 280.094 )
+position = Vector2( 254.674, 279.094 )
 scale = Vector2( 0.8, 0.8 )
 time_left = 1.0
 organ_name = ""
@@ -100,7 +100,7 @@ organ_name = ""
 position = Vector2( 565.461, 509.381 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
-type = 1
+type = 3
 
 [node name="Left Lung2" parent="." groups=[
 "b2",

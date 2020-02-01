@@ -13,6 +13,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+type = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
