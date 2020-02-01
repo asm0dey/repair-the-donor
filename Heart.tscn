@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+organ_name = "Heart"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
