@@ -19,6 +19,7 @@ func _process(delta):
 		if !death_printed:
 			print(organ_name + " is dead")
 			death_printed = true
+			_set_state(State.DEAD)
 	if dragging:
 		set_position(get_viewport().get_mouse_position())
 
@@ -30,4 +31,7 @@ func _on_Organ_input_event(viewport, event, shape_idx):
 		else:
 			emit_signal("organ_released", self, event)
 			dragging = false
+
+func _set_state(state):
+	pass
 
