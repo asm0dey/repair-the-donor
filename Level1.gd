@@ -21,6 +21,7 @@ func assign_organs():
 				bed = obj
 			elif obj is KinematicBody2D:
 				organs.append(obj)
+				obj.z_index += 1
 		bed.organs = organs
 		for organ in organs:
 			bed.places[organ.type] = organ.position
