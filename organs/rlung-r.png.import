@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/лёгкое2 (кр80).png-bdf7dd01d7017cd71deaf8bef4db548b.stex"
+path="res://.import/rlung-r.png-75313f212da52f48c72e48077dce02c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://organs/лёгкое2 (кр80).png"
-dest_files=[ "res://.import/лёгкое2 (кр80).png-bdf7dd01d7017cd71deaf8bef4db548b.stex" ]
+source_file="res://organs/rlung-r.png"
+dest_files=[ "res://.import/rlung-r.png-75313f212da52f48c72e48077dce02c4.stex" ]
 
 [params]
 
