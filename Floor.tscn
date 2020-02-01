@@ -14,11 +14,17 @@
 position = Vector2( 728, 496 )
 texture = ExtResource( 1 )
 
-[node name="Hospital" type="ParallaxLayer" parent="ParallaxBackground"]
-
 [node name="Bed" parent="." instance=ExtResource( 3 )]
 position = Vector2( 576, 256 )
+input_pickable = true
+bed_name = "Bed 1"
+
+[node name="Bed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1000, 272 )
+input_pickable = true
+bed_name = "Bed 2"
 
 [node name="Heart" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 224 )
 [connection signal="organ_released" from="Heart" to="Bed" method="organ_released"]
+[connection signal="organ_taken" from="Heart" to="Bed" method="organ_taken"]

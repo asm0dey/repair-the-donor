@@ -1,13 +1,20 @@
 extends "res://OrganContainer.gd"
 
-var waiting_for_organ = false
+var mouse_in = false
+export (String) var bed_name = "bed"
 
 func _on_Bed_mouse_entered():
-	waiting_for_organ = true
+	mouse_in = true
 
 
 func _on_Bed_mouse_exited():
-	waiting_for_organ = false
+	mouse_in = false
+
+
+func organ_taken(organ, event):
+	pass # Replace with function body.
+
 
 func organ_released(organ, event):
-	print("organ " + organ.organ_name + " is here")
+	if mouse_in:
+		print("organ " + organ.organ_name + " is put on " + bed_name)
