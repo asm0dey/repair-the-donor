@@ -14,7 +14,7 @@
 [node name="Level1" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="stock-photo-top-view-of-blood-red-spread-on-white-ground-1169468083" type="Sprite" parent="."]
+[node name="HospitalFloor" type="Sprite" parent="."]
 position = Vector2( 880, 498 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 1 )
