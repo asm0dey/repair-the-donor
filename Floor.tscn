@@ -35,3 +35,18 @@ container_name = "Bed 2"
 "organs",
 ] instance=ExtResource( 2 )]
 position = Vector2( 320, 224 )
+organ_name = "Heart 1"
+
+[node name="Heart2" parent="." groups=[
+"organs",
+] instance=ExtResource( 2 )]
+position = Vector2( 440, 456 )
+scale = Vector2( 2, 2 )
+organ_name = "Heart 2"
+
+[node name="Heart3" parent="." groups=[
+"organs",
+] instance=ExtResource( 2 )]
+position = Vector2( 640, 568 )
+scale = Vector2( 3, 3 )
+organ_name = "Heart 3"
