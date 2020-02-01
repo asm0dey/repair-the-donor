@@ -5,6 +5,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	for organ in get_tree().get_nodes_in_group("organs"):
 		for bed in get_tree().get_nodes_in_group("beds"):
+			print("connecting "+organ.organ_name+" ro bed "+bed.container_name)
 			organ.connect("organ_released", bed, "_organ_released")
 			organ.connect("organ_taken", bed, "_organ_taken")
 
@@ -12,3 +13,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+

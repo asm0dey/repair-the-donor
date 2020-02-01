@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 69.2906, 81.2817 )
 
-[node name="Bed" type="StaticBody2D"]
+[node name="Bed" type="StaticBody2D" groups=[
+"beds",
+]]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
