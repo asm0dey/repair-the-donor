@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
 [ext_resource path="res://Hepar.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://LKidney.tscn" type="PackedScene" id=9]
 [ext_resource path="res://LLung.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Footer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://bin.png" type="Texture" id=12]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,12 +21,16 @@ position = Vector2( 880, 498 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 3 )
 
+[node name="bin" type="Sprite" parent="."]
+position = Vector2( 1504.43, 214.689 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 12 )
+
 [node name="Bed" parent="." groups=[
 "b1",
 ] instance=ExtResource( 6 )]
 position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
-input_pickable = true
 container_name = "Bed 1"
 
 [node name="Bed2" parent="." groups=[
@@ -33,7 +38,6 @@ container_name = "Bed 1"
 ] instance=ExtResource( 6 )]
 position = Vector2( 597.331, 437.826 )
 scale = Vector2( 2, 2 )
-input_pickable = true
 container_name = "Bed 2"
 places = {
 

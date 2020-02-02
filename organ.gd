@@ -33,7 +33,7 @@ func _process(_delta):
 			death_printed = true
 			state = State.DEAD
 	if state == State.DEAD && container == null:
-		set_position(Vector2(1500,200))
+		set_position(Vector2(1500,220))
 		emit_signal('organ_died', self)
 		return
 	if dragging:
