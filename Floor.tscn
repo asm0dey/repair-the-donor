@@ -44,7 +44,7 @@ places = {
 position = Vector2( 226.775, 293.291 )
 scale = Vector2( 0.8, 0.8 )
 time_left = 1.0
-organ_name = ""
+organ_name = "h1"
 
 [node name="LKidney" parent="." groups=[
 "b1",
@@ -52,6 +52,7 @@ organ_name = ""
 position = Vector2( 179.899, 423.701 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
+organ_name = "lk1"
 
 [node name="Left Lung" parent="." groups=[
 "b1",

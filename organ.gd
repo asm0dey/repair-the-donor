@@ -4,8 +4,8 @@ enum State {GOOD, BAD, UGLY, DEAD}
 enum Type {HEART, LEFT_LUNG, RIGHT_LUNG, LEFT_KIDNEY, RIGHT_KIDNEY, HEPAR}
 export (State) var state
 export (float) var time_left
-export (String) var organ_name
 export (Type) var type
+export (String) var organ_name
 
 var dragging = false
 var death_printed = false
@@ -17,6 +17,7 @@ signal organ_released(organ, event)
 
 func _ready():
 	default_position = position
+	organ_name = Type.keys()[type]
 
 func _process(_delta):
 	if time_left <= 0:
