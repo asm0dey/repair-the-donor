@@ -1,27 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://GUI/Comfortaa-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GUI/start_page_button.png" type="Texture" id=1]
 [ext_resource path="res://startscreen.gd" type="Script" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 96
-font_data = ExtResource( 1 )
+[ext_resource path="res://GUI/start_page_button_hover.png" type="Texture" id=3]
+[ext_resource path="res://GUI/start_page_background.png" type="Texture" id=4]
 
 [node name="StartScene" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="."]
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 800, 448 )
+texture = ExtResource( 4 )
+
+[node name="StartButton" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -244.0
-margin_top = -136.0
-margin_right = 244.0
-margin_bottom = 136.0
-custom_fonts/font = SubResource( 1 )
-text = "Start"
+margin_left = -152.0
+margin_top = 198.0
+margin_right = 160.0
+margin_bottom = 283.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_Button_pressed"]
