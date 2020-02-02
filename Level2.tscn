@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://floor.png" type="Texture" id=1]
 [ext_resource path="res://RLung.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Bed.tscn" type="PackedScene" id=7]
 [ext_resource path="res://RKidney.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Level2.gd" type="Script" id=9]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Footer.tscn" type="PackedScene" id=11]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource( 9 )
@@ -20,13 +22,13 @@ texture = ExtResource( 1 )
 [node name="Bed" parent="." groups=[
 "b1",
 ] instance=ExtResource( 7 )]
-position = Vector2( 248, 520 )
+position = Vector2( 262.003, 462.744 )
 scale = Vector2( 2, 2 )
 
 [node name="Bed2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 7 )]
-position = Vector2( 619.382, 518.64 )
+position = Vector2( 633.385, 461.384 )
 scale = Vector2( 2, 2 )
 places = {
 
@@ -35,7 +37,7 @@ places = {
 [node name="Bed3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 7 )]
-position = Vector2( 992.124, 520 )
+position = Vector2( 1006.13, 462.744 )
 scale = Vector2( 2, 2 )
 places = {
 
@@ -44,110 +46,147 @@ places = {
 [node name="Heart" parent="." groups=[
 "b1",
 ] instance=ExtResource( 6 )]
-position = Vector2( 255.914, 467.38 )
+position = Vector2( 269.917, 410.124 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="RLung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 2 )]
-position = Vector2( 209.997, 451.13 )
+position = Vector2( 224, 393.874 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Left Lung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 5 )]
-position = Vector2( 290.159, 450.616 )
+position = Vector2( 304.162, 393.36 )
 scale = Vector2( 0.8, 0.8 )
 state = 1
 
 [node name="Hepar" parent="." groups=[
 "b1",
 ] instance=ExtResource( 4 )]
-position = Vector2( 225.991, 533.264 )
+position = Vector2( 239.994, 476.008 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="LKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 3 )]
-position = Vector2( 215.131, 590.758 )
+position = Vector2( 229.134, 533.502 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="RKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 8 )]
-position = Vector2( 285.539, 591.785 )
+position = Vector2( 299.542, 534.529 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Heart2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 6 )]
-position = Vector2( 627.295, 466.02 )
+position = Vector2( 641.298, 408.764 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="RLung2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 2 )]
-position = Vector2( 581.379, 449.769 )
+position = Vector2( 595.382, 392.513 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Left Lung2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 5 )]
-position = Vector2( 661.54, 449.256 )
+position = Vector2( 675.543, 392 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Hepar2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 4 )]
-position = Vector2( 597.373, 531.904 )
+position = Vector2( 611.376, 474.648 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="LKidney2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 3 )]
-position = Vector2( 586.513, 589.398 )
+position = Vector2( 600.516, 532.142 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="RKidney2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 8 )]
-position = Vector2( 656.92, 590.425 )
+position = Vector2( 670.923, 533.169 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Heart3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 6 )]
-position = Vector2( 1000.04, 467.38 )
+position = Vector2( 1014.04, 410.124 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="RLung3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 2 )]
-position = Vector2( 954.121, 451.129 )
+position = Vector2( 968.124, 393.873 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Left Lung3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 5 )]
-position = Vector2( 1034.28, 450.616 )
+position = Vector2( 1048.28, 393.36 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Hepar3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 4 )]
-position = Vector2( 970.115, 533.264 )
+position = Vector2( 984.118, 476.008 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="LKidney3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 3 )]
-position = Vector2( 959.255, 590.758 )
+position = Vector2( 973.258, 533.502 )
 scale = Vector2( 0.7, 0.7 )
 state = 1
 
 [node name="RKidney3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1029.66, 591.785 )
+position = Vector2( 1043.66, 534.529 )
 scale = Vector2( 0.7, 0.7 )
 state = 1
+
+[node name="GUI" parent="." instance=ExtResource( 10 )]
+margin_left = 0.0
+margin_right = 1600.0
+
+[node name="HBoxContainer" parent="GUI" index="0"]
+margin_right = 1580.0
+
+[node name="Bars" parent="GUI/HBoxContainer" index="0"]
+margin_right = 1428.0
+
+[node name="Bar" parent="GUI/HBoxContainer/Bars" index="0"]
+margin_right = 1428.0
+
+[node name="Counters" parent="GUI/HBoxContainer" index="1"]
+margin_left = 1432.0
+margin_right = 1560.0
+
+[node name="Footer" parent="." instance=ExtResource( 11 )]
+margin_left = 0.0
+margin_top = 784.0
+margin_right = 1264.0
+margin_bottom = 890.0
+
+[node name="HealthUpdateTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="OrganCountUpdateTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+[connection signal="pressed" from="GUI/HBoxContainer/Bars/Bar/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
+[connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
+
+[editable path="GUI"]
+
+[editable path="GUI/HBoxContainer/Bars/Bar"]
