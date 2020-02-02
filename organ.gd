@@ -11,6 +11,7 @@ var dragging = false
 var death_printed = false
 
 var default_position: Vector2
+var container
 
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
@@ -21,6 +22,8 @@ func _ready():
 		organ_name = Type.keys()[type]
 
 func _process(_delta):
+	if container == null:
+		time_left -= 2
 	if time_left <= 0:
 		input_pickable = false
 		if !death_printed:
@@ -34,6 +37,7 @@ func _on_Organ_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			emit_signal("organ_taken", self, event)
+			container = null
 			dragging = true
 		else:
 			emit_signal("organ_released", self, event)
