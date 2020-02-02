@@ -20,3 +20,22 @@ func place_organ(organ:KinematicBody2D):
 	organs.append(organ)
 	organ.container = self
 	print("Putting organ type %s to position %s" % [organ.type, places[organ.type]] )
+
+
+func _on_Heart_organ_died(organ):
+	$Sprite.hide()
+	$Sprite2.show()
+
+func _on_Heart2_organ_died(organ):
+	$Sprite.hide()
+	$Sprite2.show()
+
+
+func _on_Heart3_organ_died(organ):
+	$Sprite.hide()
+	$Sprite2.show()
+
+
+func _on_Heart4_organ_died(organ):
+	$Sprite.hide()
+	$Sprite2.show()

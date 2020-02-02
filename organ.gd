@@ -15,6 +15,7 @@ var container
 
 signal organ_taken(organ, event)
 signal organ_released(organ, event)
+signal organ_died(organ)
 
 func _ready():
 	default_position = position
@@ -32,6 +33,7 @@ func _process(_delta):
 			state = State.DEAD
 	if state == State.DEAD && container == null:
 		set_position(Vector2(1500,200))
+		emit_signal('organ_died', self)
 		return
 	if dragging:
 		set_position(get_viewport().get_mouse_position())
