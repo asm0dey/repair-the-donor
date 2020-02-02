@@ -1,8 +1,10 @@
 extends Node2D
 
 var starting_time = 100
-var time_step = 5
+var time_step = 10
 var current_time_left
+
+var bed_groups = ["b1","b2"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,6 +12,8 @@ func _ready():
 	adjust_timer()
 	assign_organ_actions()
 	assign_organs()
+	
+	_on_OrganCountUpdateTimer_timeout()
 
 func adjust_timer():
 	if current_time_left < 0:
@@ -24,7 +28,7 @@ func assign_organ_actions():
 			organ.connect("organ_taken", bed, "_organ_taken")
 
 func assign_organs():
-	for group in ["b1","b2"]:
+	for group in bed_groups:
 		var organs = []
 		var bed
 		for obj in get_tree().get_nodes_in_group(group):
@@ -37,14 +41,6 @@ func assign_organs():
 		for organ in organs:
 			bed.places[organ.type] = organ.position
 			organ.container = bed
-func count_alive_organs():
-	var alive_organs = 0
-	for group in ["b1","b2"]:
-		for obj in get_tree().get_nodes_in_group(group):
-			if obj is KinematicBody2D:
-				if obj.state != obj.State.DEAD:
-					alive_organs += 1
-	return alive_organs
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -53,9 +49,11 @@ func count_alive_organs():
 func _on_HealthUpdateTimer_timeout():
 	current_time_left = current_time_left - time_step
 	adjust_timer()
-		
-	var num_alive_organs = count_alive_organs()
-	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Level3.tscn")
+
+
+func _on_OrganCountUpdateTimer_timeout():
+	var num_alive_organs = globals.count_alive_organs(bed_groups)
+	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs

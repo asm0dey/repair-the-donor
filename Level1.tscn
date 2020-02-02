@@ -139,10 +139,15 @@ margin_bottom = 168.0
 
 [node name="HealthUpdateTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="OrganCountUpdateTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
 [connection signal="organ_died" from="Heart" to="Bed" method="_on_Heart_organ_died"]
 [connection signal="organ_died" from="Heart2" to="Bed2" method="_on_Heart2_organ_died"]
 [connection signal="pressed" from="GUI/HBoxContainer/Bars/Bar/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
+[connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
 
 [editable path="GUI"]
 
