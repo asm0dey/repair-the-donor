@@ -7,6 +7,7 @@
 [node name="Bed" type="StaticBody2D" groups=[
 "beds",
 ]]
+input_pickable = true
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
