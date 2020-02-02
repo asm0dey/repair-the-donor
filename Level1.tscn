@@ -22,7 +22,7 @@ texture = ExtResource( 3 )
 [node name="Bed" parent="." groups=[
 "b1",
 ] instance=ExtResource( 6 )]
-position = Vector2( 211.769, 352.146 )
+position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
 input_pickable = true
 container_name = "Bed 1"
@@ -41,7 +41,7 @@ places = {
 [node name="Heart" parent="." groups=[
 "b1",
 ] instance=ExtResource( 8 )]
-position = Vector2( 221.799, 300.162 )
+position = Vector2( 226.968, 389.334 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = "h1"
@@ -57,7 +57,7 @@ organ_name = "h1"
 [node name="LKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 9 )]
-position = Vector2( 182.899, 423.701 )
+position = Vector2( 188.068, 512.873 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = "lk1"
@@ -65,7 +65,7 @@ organ_name = "lk1"
 [node name="Left Lung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 10 )]
-position = Vector2( 254.674, 279.094 )
+position = Vector2( 259.843, 368.266 )
 scale = Vector2( 0.8, 0.8 )
 time_left = 1.0
 organ_name = ""
@@ -73,7 +73,7 @@ organ_name = ""
 [node name="RLung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 7 )]
-position = Vector2( 172.918, 283.761 )
+position = Vector2( 178.087, 372.933 )
 scale = Vector2( 0.8, 0.8 )
 time_left = 1.0
 organ_name = ""
@@ -81,7 +81,7 @@ organ_name = ""
 [node name="Hepar" parent="." groups=[
 "b1",
 ] instance=ExtResource( 2 )]
-position = Vector2( 191.509, 365.85 )
+position = Vector2( 196.678, 455.022 )
 scale = Vector2( 0.8, 0.8 )
 time_left = 1.0
 organ_name = ""
@@ -89,7 +89,7 @@ organ_name = ""
 [node name="RKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 4 )]
-position = Vector2( 245.623, 420.969 )
+position = Vector2( 250.792, 510.141 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = ""
