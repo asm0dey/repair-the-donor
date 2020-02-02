@@ -18,4 +18,5 @@ func place_organ(organ:KinematicBody2D):
 	organ.set_position(places[organ.type])
 	organ.default_position = organ.position
 	organs.append(organ)
+	organ.container = self
 	print("Putting organ type %s to position %s" % [organ.type, places[organ.type]] )

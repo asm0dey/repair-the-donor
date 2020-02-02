@@ -25,7 +25,7 @@ func assign_organs():
 		bed.organs = organs
 		for organ in organs:
 			bed.places[organ.type] = organ.position
-
+			organ.container = bed
 func count_alive_organs():
 	var alive_organs = 0
 	for group in ["b1","b2"]:
