@@ -41,15 +41,23 @@ places = {
 [node name="Heart" parent="." groups=[
 "b1",
 ] instance=ExtResource( 2 )]
-position = Vector2( 226.775, 293.291 )
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 221.799, 300.162 )
+scale = Vector2( 0.6, 0.6 )
+time_left = 1.0
+organ_name = "h1"
+
+[node name="Heart2" parent="." groups=[
+"b1",
+] instance=ExtResource( 2 )]
+position = Vector2( 608.015, 387.326 )
+scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = "h1"
 
 [node name="LKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 6 )]
-position = Vector2( 179.899, 423.701 )
+position = Vector2( 182.899, 423.701 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = "lk1"
@@ -86,18 +94,10 @@ scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = ""
 
-[node name="Heart2" parent="." groups=[
-"b2",
-] instance=ExtResource( 2 )]
-position = Vector2( 612.337, 378.971 )
-scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
-organ_name = ""
-
 [node name="LKidney2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 6 )]
-position = Vector2( 565.461, 509.381 )
+position = Vector2( 568.461, 509.381 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 

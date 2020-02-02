@@ -17,7 +17,8 @@ signal organ_released(organ, event)
 
 func _ready():
 	default_position = position
-	organ_name = Type.keys()[type]
+	if organ_name == null:
+		organ_name = Type.keys()[type]
 
 func _process(_delta):
 	if time_left <= 0:
