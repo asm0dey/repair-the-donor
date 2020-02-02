@@ -18,4 +18,4 @@ func _ready():
 
 func _on_Button_pressed():
 	print('Oh hi Mark')
-	get_tree().change_scene("res://Floor.tscn")
+	get_tree().change_scene("res://Level1.tscn")

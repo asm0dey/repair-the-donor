@@ -46,3 +46,6 @@ func _on_HealthUpdateTimer_timeout():
 	
 	var num_alive_organs = count_alive_organs()
 	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Level3.tscn")

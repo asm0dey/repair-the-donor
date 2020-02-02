@@ -1,258 +1,143 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
-[ext_resource path="res://heart.gd" type="Script" id=2]
-[ext_resource path="res://bed.gd" type="Script" id=3]
-[ext_resource path="res://Bed.tscn" type="PackedScene" id=4]
-[ext_resource path="res://hepar.gd" type="Script" id=5]
-[ext_resource path="res://lkidney.gd" type="Script" id=6]
-[ext_resource path="res://llung.gd" type="Script" id=7]
-[ext_resource path="res://rkidney.gd" type="Script" id=8]
-[ext_resource path="res://rlung.gd" type="Script" id=9]
-[ext_resource path="res://RLung.tscn" type="PackedScene" id=10]
-[ext_resource path="res://LKidney.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Heart.tscn" type="PackedScene" id=12]
-[ext_resource path="res://LLung.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Hepar.tscn" type="PackedScene" id=14]
-[ext_resource path="res://RKidney.tscn" type="PackedScene" id=15]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Hepar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://floor.png" type="Texture" id=3]
+[ext_resource path="res://RKidney.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://RLung.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Heart.tscn" type="PackedScene" id=8]
+[ext_resource path="res://LKidney.tscn" type="PackedScene" id=9]
+[ext_resource path="res://LLung.tscn" type="PackedScene" id=10]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Bed" type="StaticBody2D" parent="." groups=[
+[node name="HospitalFloor" type="Sprite" parent="."]
+position = Vector2( 880, 498 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 3 )
+
+[node name="Bed" parent="." groups=[
 "b1",
-"beds",
-] instance=ExtResource( 4 )]
+] instance=ExtResource( 6 )]
 position = Vector2( 211.769, 352.146 )
 scale = Vector2( 2, 2 )
 input_pickable = true
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-size = 3
 container_name = "Bed 1"
-places = {
 
-}
-
-[node name="Bed2" type="StaticBody2D" parent="." groups=[
+[node name="Bed2" parent="." groups=[
 "b2",
-"beds",
-] instance=ExtResource( 4 )]
+] instance=ExtResource( 6 )]
 position = Vector2( 597.331, 437.826 )
 scale = Vector2( 2, 2 )
 input_pickable = true
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-size = 3
 container_name = "Bed 2"
 places = {
 
 }
 
-[node name="Heart" type="KinematicBody2D" parent="." groups=[
+[node name="Heart" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 12 )]
+] instance=ExtResource( 8 )]
 position = Vector2( 221.799, 300.162 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
 organ_name = "h1"
 
-[node name="Heart2" type="KinematicBody2D" parent="." groups=[
+[node name="Heart2" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 12 )]
+] instance=ExtResource( 8 )]
 position = Vector2( 608.015, 387.326 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
 organ_name = "h1"
 
-[node name="LKidney" type="KinematicBody2D" parent="." groups=[
+[node name="LKidney" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 11 )]
+] instance=ExtResource( 9 )]
 position = Vector2( 182.899, 423.701 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 3
 organ_name = "lk1"
 
-[node name="Left Lung" type="KinematicBody2D" parent="." groups=[
+[node name="Left Lung" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 13 )]
+] instance=ExtResource( 10 )]
 position = Vector2( 254.674, 279.094 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 1
+organ_name = ""
 
-[node name="RLung" type="KinematicBody2D" parent="." groups=[
+[node name="RLung" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 10 )]
+] instance=ExtResource( 7 )]
 position = Vector2( 172.918, 283.761 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 2
+organ_name = ""
 
-[node name="Hepar" type="KinematicBody2D" parent="." groups=[
+[node name="Hepar" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 14 )]
+] instance=ExtResource( 2 )]
 position = Vector2( 191.509, 365.85 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 5
+organ_name = ""
 
-[node name="RKidney" type="KinematicBody2D" parent="." groups=[
+[node name="RKidney" parent="." groups=[
 "b1",
-"organs",
-] instance=ExtResource( 15 )]
+] instance=ExtResource( 4 )]
 position = Vector2( 245.623, 420.969 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 4
+organ_name = ""
 
-[node name="LKidney2" type="KinematicBody2D" parent="." groups=[
+[node name="LKidney2" parent="." groups=[
 "b2",
-"organs",
-] instance=ExtResource( 11 )]
+] instance=ExtResource( 9 )]
 position = Vector2( 568.461, 509.381 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 3
 
-[node name="Left Lung2" type="KinematicBody2D" parent="." groups=[
+[node name="Left Lung2" parent="." groups=[
 "b2",
-"organs",
-] instance=ExtResource( 13 )]
+] instance=ExtResource( 10 )]
 position = Vector2( 640.236, 365.774 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 1
+organ_name = ""
 
-[node name="RLung2" type="KinematicBody2D" parent="." groups=[
+[node name="RLung2" parent="." groups=[
 "b2",
-"organs",
-] instance=ExtResource( 10 )]
+] instance=ExtResource( 7 )]
 position = Vector2( 558.48, 369.441 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 2
+organ_name = ""
 
-[node name="Hepar2" type="KinematicBody2D" parent="." groups=[
+[node name="Hepar2" parent="." groups=[
 "b2",
-"organs",
-] instance=ExtResource( 14 )]
+] instance=ExtResource( 2 )]
 position = Vector2( 577.071, 451.53 )
 scale = Vector2( 0.8, 0.8 )
-input_pickable = true
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 time_left = 1.0
-type = 5
+organ_name = ""
 
-[node name="RKidney2" type="KinematicBody2D" parent="." groups=[
+[node name="RKidney2" parent="." groups=[
 "b2",
-"organs",
-] instance=ExtResource( 15 )]
+] instance=ExtResource( 4 )]
 position = Vector2( 631.185, 506.649 )
 scale = Vector2( 0.6, 0.6 )
-input_pickable = true
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
 state = 1
 time_left = 95.0
-type = 4
+organ_name = ""
 
-[node name="GUI" type="MarginContainer" parent="." instance=ExtResource( 16 )]
-anchor_right = 1.0
-margin_left = 8.0
+[node name="GUI" parent="." instance=ExtResource( 5 )]
 margin_right = 1600.0
 margin_bottom = 168.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HealthUpdateTimer" type="Timer" parent="."]
 autostart = true
-[connection signal="mouse_entered" from="Bed" to="Bed" method="_on_Bed_mouse_entered"]
-[connection signal="mouse_exited" from="Bed" to="Bed" method="_on_Bed_mouse_exited"]
-[connection signal="mouse_entered" from="Bed2" to="Bed2" method="_on_Bed_mouse_entered"]
-[connection signal="mouse_exited" from="Bed2" to="Bed2" method="_on_Bed_mouse_exited"]
-[connection signal="input_event" from="Heart" to="Heart" method="_on_Organ_input_event"]
-[connection signal="input_event" from="Heart2" to="Heart2" method="_on_Organ_input_event"]
-[connection signal="input_event" from="LKidney" to="LKidney" method="_on_Organ_input_event"]
-[connection signal="input_event" from="Left Lung" to="Left Lung" method="_on_Organ_input_event"]
-[connection signal="input_event" from="RLung" to="RLung" method="_on_Organ_input_event"]
-[connection signal="input_event" from="Hepar" to="Hepar" method="_on_Organ_input_event"]
-[connection signal="input_event" from="RKidney" to="RKidney" method="_on_Organ_input_event"]
-[connection signal="input_event" from="LKidney2" to="LKidney2" method="_on_Organ_input_event"]
-[connection signal="input_event" from="Left Lung2" to="Left Lung2" method="_on_Organ_input_event"]
-[connection signal="input_event" from="RLung2" to="RLung2" method="_on_Organ_input_event"]
-[connection signal="input_event" from="Hepar2" to="Hepar2" method="_on_Organ_input_event"]
-[connection signal="input_event" from="RKidney2" to="RKidney2" method="_on_Organ_input_event"]
 [connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
