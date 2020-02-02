@@ -27,6 +27,17 @@ scale = Vector2( 2, 2 )
 input_pickable = true
 container_name = "Bed 1"
 
+[node name="Bed2" parent="." groups=[
+"b2",
+] instance=ExtResource( 3 )]
+position = Vector2( 597.331, 437.826 )
+scale = Vector2( 2, 2 )
+input_pickable = true
+container_name = "Bed 2"
+places = {
+
+}
+
 [node name="Heart" parent="." groups=[
 "b1",
 ] instance=ExtResource( 2 )]
@@ -73,17 +84,6 @@ position = Vector2( 245.623, 420.969 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 1.0
 organ_name = ""
-
-[node name="Bed2" parent="." groups=[
-"b2",
-] instance=ExtResource( 3 )]
-position = Vector2( 597.331, 437.826 )
-scale = Vector2( 2, 2 )
-input_pickable = true
-container_name = "Bed 1"
-places = {
-
-}
 
 [node name="Heart2" parent="." groups=[
 "b2",
