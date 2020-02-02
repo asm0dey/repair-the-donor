@@ -22,12 +22,14 @@ texture = ExtResource( 5 )
 ] instance=ExtResource( 4 )]
 position = Vector2( 228.888, 506.558 )
 scale = Vector2( 1.8, 1.8 )
+input_pickable = true
 
 [node name="Bed2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 4 )]
 position = Vector2( 565.402, 503.694 )
 scale = Vector2( 1.8, 1.8 )
+input_pickable = true
 places = {
 
 }
@@ -37,6 +39,7 @@ places = {
 ] instance=ExtResource( 4 )]
 position = Vector2( 903.347, 500.83 )
 scale = Vector2( 1.8, 1.8 )
+input_pickable = true
 places = {
 
 }
@@ -46,6 +49,7 @@ places = {
 ] instance=ExtResource( 4 )]
 position = Vector2( 1258.48, 505.126 )
 scale = Vector2( 1.8, 1.8 )
+input_pickable = true
 places = {
 
 }

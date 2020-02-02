@@ -20,7 +20,6 @@ func adjust_timer():
 func assign_organ_actions():
 	for organ in get_tree().get_nodes_in_group("organs"):
 		for bed in get_tree().get_nodes_in_group("beds"):
-			print("connecting "+organ.organ_name+" ro bed "+bed.container_name)
 			organ.connect("organ_released", bed, "_organ_released")
 			organ.connect("organ_taken", bed, "_organ_taken")
 

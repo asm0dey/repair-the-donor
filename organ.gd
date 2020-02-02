@@ -23,7 +23,7 @@ func _ready():
 
 func _process(_delta):
 	if container == null:
-		time_left -= 2
+		time_left -= 1
 	if time_left <= 0:
 		input_pickable = false
 		if !death_printed:
