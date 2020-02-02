@@ -14,8 +14,8 @@ __meta__ = {
 "_edit_group_": true
 }
 time_left = 500.0
-organ_name = "RLung"
 type = 2
+organ_name = "RLung"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -29,5 +29,6 @@ visible = false
 texture = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PoolVector2Array( -16, -40, -32, -8, -40, 8, -40.7089, 18.1745, -38.0682, 55.1451, -32.3465, 61.3069, -23.544, 63.5076, 19.1483, 49.8636, 22.6693, 39.3006, 23.9897, 32.6987, 23.1095, 1.88979, 25.3101, -20.9968, 32.3521, -22.7573, 35.8731, -23.1974, 38.5139, -31.1197, 35.433, -36.4013, 26.1904, -28.479, 23.1095, -51.3656, 17.3878, -61.9286, 1.10312, -60.6082 )
 [connection signal="input_event" from="." to="." method="_on_Organ_input_event"]
