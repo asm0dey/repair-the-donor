@@ -31,17 +31,24 @@ func assign_organ_actions():
 func assign_organs():
 	for group in bed_groups:
 		var organs = []
+		var fake_organs = []
 		var bed
 		for obj in get_tree().get_nodes_in_group(group):
 			if obj is StaticBody2D:
 				bed = obj
 			elif obj is KinematicBody2D:
-				organs.append(obj)
+				if obj.to_delete:
+					fake_organs.append(obj)
+				else:
+					organs.append(obj)
 				obj.z_index += 1
 		bed.organs = organs
 		for organ in organs:
 			bed.places[organ.type] = organ.position
 			organ.container = bed
+		for organ in fake_organs:
+			bed.places[organ.type] = organ.position
+			organ.queue_free()
 
 func _on_HealthUpdateTimer_timeout():
 	current_time_left = current_time_left - time_step
@@ -50,3 +57,4 @@ func _on_HealthUpdateTimer_timeout():
 func _on_OrganCountUpdateTimer_timeout():
 	var num_alive_organs = globals.count_alive_organs(bed_groups)
 	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs
+

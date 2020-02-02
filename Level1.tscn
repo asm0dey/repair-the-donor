@@ -43,7 +43,6 @@ places = {
 ] instance=ExtResource( 8 )]
 position = Vector2( 226.968, 389.334 )
 scale = Vector2( 0.6, 0.6 )
-time_left = 1.0
 organ_name = "h1"
 
 [node name="Heart2" parent="." groups=[
@@ -51,7 +50,6 @@ organ_name = "h1"
 ] instance=ExtResource( 8 )]
 position = Vector2( 608.015, 387.326 )
 scale = Vector2( 0.6, 0.6 )
-time_left = 1.0
 organ_name = "h1"
 
 [node name="LKidney" parent="." groups=[
@@ -59,7 +57,6 @@ organ_name = "h1"
 ] instance=ExtResource( 9 )]
 position = Vector2( 188.068, 512.873 )
 scale = Vector2( 0.6, 0.6 )
-time_left = 100.0
 organ_name = "lk1"
 
 [node name="Left Lung" parent="." groups=[
@@ -67,7 +64,6 @@ organ_name = "lk1"
 ] instance=ExtResource( 10 )]
 position = Vector2( 259.843, 368.266 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="RLung" parent="." groups=[
@@ -75,7 +71,6 @@ organ_name = ""
 ] instance=ExtResource( 7 )]
 position = Vector2( 178.087, 372.933 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="Hepar" parent="." groups=[
@@ -83,7 +78,6 @@ organ_name = ""
 ] instance=ExtResource( 2 )]
 position = Vector2( 196.678, 455.022 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="RKidney" parent="." groups=[
@@ -98,14 +92,12 @@ organ_name = ""
 ] instance=ExtResource( 9 )]
 position = Vector2( 568.461, 509.381 )
 scale = Vector2( 0.6, 0.6 )
-time_left = 1.0
 
 [node name="Left Lung2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 10 )]
 position = Vector2( 640.236, 365.774 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="RLung2" parent="." groups=[
@@ -113,7 +105,6 @@ organ_name = ""
 ] instance=ExtResource( 7 )]
 position = Vector2( 558.48, 369.441 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="Hepar2" parent="." groups=[
@@ -121,7 +112,6 @@ organ_name = ""
 ] instance=ExtResource( 2 )]
 position = Vector2( 577.071, 451.53 )
 scale = Vector2( 0.8, 0.8 )
-time_left = 1.0
 organ_name = ""
 
 [node name="RKidney2" parent="." groups=[
@@ -130,7 +120,6 @@ organ_name = ""
 position = Vector2( 631.185, 506.649 )
 scale = Vector2( 0.6, 0.6 )
 state = 1
-time_left = 95.0
 organ_name = ""
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]

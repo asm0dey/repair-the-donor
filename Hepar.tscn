@@ -13,9 +13,9 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
-time_left = 100.0
-organ_name = "Hepar"
+time_left = 200.0
 type = 5
+organ_name = "Hepar"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )

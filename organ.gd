@@ -6,6 +6,7 @@ export (State) var state
 export (float) var time_left
 export (Type) var type
 export (String) var organ_name
+export (bool) var to_delete = false
 
 var dragging = false
 var death_printed = false
