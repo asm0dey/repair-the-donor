@@ -1,5 +1,13 @@
 extends "res://OrganContainer.gd"
 
+enum State {NEUTRAL, DEAD, HAPPY, SCARED}
+export (State) var state
+
+func hide_all_sprites():
+	$SpriteNeutral.hide()
+	$SpriteDead.hide()
+	$SpriteHappy.hide()
+	$SpriteScared.hide()
 
 func _on_Bed_mouse_entered():
 	_mouse_in = true
@@ -23,19 +31,27 @@ func place_organ(organ:KinematicBody2D):
 
 
 func _on_Heart_organ_died(organ):
-	$Sprite.hide()
-	$Sprite2.show()
+	hide_all_sprites()
+	$SpriteDead.show()
+	
+	state = State.DEAD
 
 func _on_Heart2_organ_died(organ):
-	$Sprite.hide()
-	$Sprite2.show()
+	hide_all_sprites()
+	$SpriteDead.show()
+	
+	state = State.DEAD
 
 
 func _on_Heart3_organ_died(organ):
-	$Sprite.hide()
-	$Sprite2.show()
+	hide_all_sprites()
+	$SpriteDead.show()
+	
+	state = State.DEAD
 
 
 func _on_Heart4_organ_died(organ):
-	$Sprite.hide()
-	$Sprite2.show()
+	hide_all_sprites()
+	$SpriteDead.show()
+	
+	state = State.DEAD

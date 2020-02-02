@@ -32,6 +32,7 @@ texture = ExtResource( 12 )
 position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
 container_name = "Bed 1"
+state = 1
 
 [node name="Bed2" parent="." groups=[
 "b2",
@@ -42,6 +43,7 @@ container_name = "Bed 2"
 places = {
 
 }
+state = 1
 
 [node name="Heart" parent="." groups=[
 "b1",

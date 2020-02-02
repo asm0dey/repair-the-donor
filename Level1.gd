@@ -51,6 +51,12 @@ func _on_HealthUpdateTimer_timeout():
 	adjust_timer()
 
 func _on_Button_pressed():
+	if $Bed.state != $Bed.State.DEAD:
+		globals.score += 500
+		
+	if $Bed2.state != $Bed2.State.DEAD:
+		globals.score += 500
+	
 	get_tree().change_scene("res://Level2.tscn")
 
 
