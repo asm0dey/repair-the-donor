@@ -17,182 +17,182 @@ script = ExtResource( 9 )
 position = Vector2( 800, 448 )
 texture = ExtResource( 5 )
 
-[node name="Bed" parent="floor" groups=[
+[node name="Bed" parent="." groups=[
 "b1",
 ] instance=ExtResource( 4 )]
-position = Vector2( -584, -56 )
+position = Vector2( 216, 392 )
 scale = Vector2( 1.8, 1.8 )
 
-[node name="Bed2" parent="floor" groups=[
+[node name="Bed2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 4 )]
-position = Vector2( -247.486, -58.864 )
+position = Vector2( 552.514, 389.136 )
 scale = Vector2( 1.8, 1.8 )
 places = {
 
 }
 
-[node name="Bed3" parent="floor" groups=[
+[node name="Bed3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 4 )]
-position = Vector2( 90.4591, -61.7279 )
+position = Vector2( 890.459, 386.272 )
 scale = Vector2( 1.8, 1.8 )
 places = {
 
 }
 
-[node name="Bed4" parent="floor" groups=[
+[node name="Bed4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 4 )]
-position = Vector2( 445.588, -57.432 )
+position = Vector2( 1245.59, 390.568 )
 scale = Vector2( 1.8, 1.8 )
 places = {
 
 }
 
-[node name="Heart" parent="floor" groups=[
+[node name="Heart" parent="." groups=[
 "b1",
 ] instance=ExtResource( 6 )]
-position = Vector2( -575, -102 )
+position = Vector2( 225, 346 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Left Lung" parent="floor" groups=[
+[node name="Left Lung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 7 )]
-position = Vector2( -545.089, -119.798 )
+position = Vector2( 254.911, 328.202 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="RLung" parent="floor" groups=[
+[node name="RLung" parent="." groups=[
 "b1",
 ] instance=ExtResource( 2 )]
-position = Vector2( -619.393, -117.474 )
+position = Vector2( 180.607, 330.526 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="Hepar" parent="floor" groups=[
+[node name="Hepar" parent="." groups=[
 "b1",
 ] instance=ExtResource( 3 )]
-position = Vector2( -601.572, -43.8784 )
+position = Vector2( 198.428, 404.122 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="LKidney" parent="floor" groups=[
+[node name="LKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 1 )]
-position = Vector2( -608.427, 12.9886 )
+position = Vector2( 191.573, 460.989 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 200.0
 
-[node name="RKidney" parent="floor" groups=[
+[node name="RKidney" parent="." groups=[
 "b1",
 ] instance=ExtResource( 8 )]
-position = Vector2( -554.056, 13.3131 )
+position = Vector2( 245.944, 461.313 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 200.0
 
-[node name="Heart2" parent="floor" groups=[
+[node name="Heart2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 6 )]
-position = Vector2( -238.486, -104.864 )
+position = Vector2( 561.514, 343.136 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Left Lung2" parent="floor" groups=[
+[node name="Left Lung2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 7 )]
-position = Vector2( -208.576, -122.662 )
+position = Vector2( 591.424, 325.338 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="RLung2" parent="floor" groups=[
+[node name="RLung2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 2 )]
-position = Vector2( -282.88, -120.338 )
+position = Vector2( 517.12, 327.662 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="Hepar2" parent="floor" groups=[
+[node name="Hepar2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 3 )]
-position = Vector2( -265.059, -46.7423 )
+position = Vector2( 534.941, 401.258 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="LKidney2" parent="floor" groups=[
+[node name="LKidney2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 1 )]
-position = Vector2( -271.913, 10.1247 )
+position = Vector2( 528.087, 458.125 )
 scale = Vector2( 0.6, 0.6 )
 state = 1
 time_left = 50.0
 
-[node name="Heart3" parent="floor" groups=[
+[node name="Heart3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 6 )]
-position = Vector2( 99.4591, -107.728 )
+position = Vector2( 899.459, 340.272 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Left Lung3" parent="floor" groups=[
+[node name="Left Lung3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 7 )]
-position = Vector2( 129.37, -125.526 )
+position = Vector2( 929.37, 322.474 )
 scale = Vector2( 0.7, 0.7 )
 state = 1
 time_left = 200.0
 
-[node name="Hepar3" parent="floor" groups=[
+[node name="Hepar3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 3 )]
-position = Vector2( 72.8868, -49.6063 )
+position = Vector2( 872.887, 398.394 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="LKidney3" parent="floor" groups=[
+[node name="LKidney3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 1 )]
-position = Vector2( 66.0326, 7.26071 )
+position = Vector2( 866.033, 455.261 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 200.0
 
-[node name="RKidney3" parent="floor" groups=[
+[node name="RKidney3" parent="." groups=[
 "b3",
 ] instance=ExtResource( 8 )]
-position = Vector2( 120.403, 7.58524 )
+position = Vector2( 920.403, 455.585 )
 scale = Vector2( 0.6, 0.6 )
 time_left = 200.0
 
-[node name="Heart4" parent="floor" groups=[
+[node name="Heart4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 6 )]
-position = Vector2( 454.588, -103.432 )
+position = Vector2( 1254.59, 344.568 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Left Lung4" parent="floor" groups=[
+[node name="Left Lung4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 7 )]
-position = Vector2( 484.499, -121.23 )
+position = Vector2( 1284.5, 326.77 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="RLung4" parent="floor" groups=[
+[node name="RLung4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 2 )]
-position = Vector2( 410.195, -118.906 )
+position = Vector2( 1210.2, 329.094 )
 scale = Vector2( 0.7, 0.7 )
 time_left = 200.0
 
-[node name="LKidney4" parent="floor" groups=[
+[node name="LKidney4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 1 )]
-position = Vector2( 421.162, 11.5566 )
+position = Vector2( 1221.16, 459.557 )
 scale = Vector2( 0.6, 0.6 )
 state = 1
 time_left = 200.0
 
-[node name="RKidney4" parent="floor" groups=[
+[node name="RKidney4" parent="." groups=[
 "b4",
 ] instance=ExtResource( 8 )]
-position = Vector2( 475.532, 11.8811 )
+position = Vector2( 1275.53, 459.881 )
 scale = Vector2( 0.6, 0.6 )
 state = 1
 time_left = 200.0

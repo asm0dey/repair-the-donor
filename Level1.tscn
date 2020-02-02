@@ -47,7 +47,7 @@ time_left = 1.0
 organ_name = "h1"
 
 [node name="Heart2" parent="." groups=[
-"b1",
+"b2",
 ] instance=ExtResource( 8 )]
 position = Vector2( 608.015, 387.326 )
 scale = Vector2( 0.6, 0.6 )
