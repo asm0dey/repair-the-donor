@@ -30,6 +30,9 @@ func _process(_delta):
 			print(organ_name + " is dead")
 			death_printed = true
 			state = State.DEAD
+	if state == State.DEAD:
+		set_position(Vector2(1500,200))
+		return
 	if dragging:
 		set_position(get_viewport().get_mouse_position())
 
