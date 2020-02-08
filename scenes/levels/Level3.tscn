@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/common/Bed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://floor.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Level3.gd" type="Script" id=9]
+[ext_resource path="res://scenes/ui/GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ui/Footer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://bin.png" type="Texture" id=12]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="floor" type="Sprite" parent="."]
+position = Vector2( 800, 448 )
+texture = ExtResource( 5 )
+
+[node name="bin" type="Sprite" parent="."]
+position = Vector2( 1489.96, 218.618 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="Bed" parent="." groups=[
+"b1",
+] instance=ExtResource( 4 )]
+position = Vector2( 214.568, 390.568 )
+scale = Vector2( 1.8, 1.8 )
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
+
+[node name="Bed2" parent="." groups=[
+"b2",
+] instance=ExtResource( 4 )]
+position = Vector2( 551.082, 387.704 )
+scale = Vector2( 1.8, 1.8 )
+places = {
+
+}
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
+
+[node name="Bed3" parent="." groups=[
+"b3",
+] instance=ExtResource( 4 )]
+position = Vector2( 889.027, 384.84 )
+scale = Vector2( 1.8, 1.8 )
+places = {
+
+}
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
+
+[node name="Bed4" parent="." groups=[
+"b4",
+] instance=ExtResource( 4 )]
+position = Vector2( 1228.41, 383.408 )
+scale = Vector2( 1.8, 1.8 )
+places = {
+
+}
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
+
+[node name="GUI" parent="." instance=ExtResource( 10 )]
+margin_left = 0.0
+margin_right = 1600.0
+
+[node name="HealthUpdateTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="OrganCountUpdateTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="Footer" parent="." instance=ExtResource( 11 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 789.0
+margin_top = 792.0
+margin_right = 1258.0
+margin_bottom = 898.0
+[connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
+[connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
+
+[editable path="Bed"]
+
+[editable path="Bed2"]
+
+[editable path="Bed3"]
+
+[editable path="Bed4"]

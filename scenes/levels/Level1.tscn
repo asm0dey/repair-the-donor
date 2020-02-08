@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Level1.gd" type="Script" id=1]
-[ext_resource path="res://floor.png" type="Texture" id=3]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Bed.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Footer.tscn" type="PackedScene" id=11]
-[ext_resource path="res://bin.png" type="Texture" id=12]
+[ext_resource path="res://scripts/Level1.gd" type="Script" id=1]
+[ext_resource path="res://floor.png" type="Texture" id=2]
+[ext_resource path="res://bin.png" type="Texture" id=3]
+[ext_resource path="res://scenes/common/Bed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/Footer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/ui/GUI.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,21 +14,19 @@ script = ExtResource( 1 )
 position = Vector2( 880, 498 )
 scale = Vector2( 1.1, 1.1 )
 z_as_relative = false
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="bin" type="Sprite" parent="."]
 position = Vector2( 1504.43, 214.689 )
 scale = Vector2( 0.7, 0.7 )
 z_as_relative = false
-texture = ExtResource( 12 )
+texture = ExtResource( 3 )
 
 [node name="Bed" parent="." groups=[
 "b1",
-] instance=ExtResource( 6 )]
+] instance=ExtResource( 4 )]
 position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
-container_name = "Bed 1"
-state = 1
 organ_exists = {
 "HEART": true,
 "HEPAR": true,
@@ -37,16 +35,14 @@ organ_exists = {
 "RIGHT_KIDNEY": true,
 "RIGHT_LUNG": true
 }
+container_name = "Bed 1"
+state = 1
 
 [node name="Bed2" parent="." groups=[
 "b2",
-] instance=ExtResource( 6 )]
+] instance=ExtResource( 4 )]
 position = Vector2( 597.331, 437.826 )
 scale = Vector2( 2, 2 )
-container_name = "Bed 2"
-places = {
-
-}
 organ_exists = {
 "HEART": true,
 "HEPAR": true,
@@ -54,12 +50,16 @@ organ_exists = {
 "LEFT_LUNG": true,
 "RIGHT_KIDNEY": true,
 "RIGHT_LUNG": true
+}
+container_name = "Bed 2"
+places = {
+
 }
 
 [node name="RKidney" parent="Bed2" index="10"]
 state = 1
 
-[node name="GUI" parent="." instance=ExtResource( 5 )]
+[node name="GUI" parent="." instance=ExtResource( 6 )]
 margin_right = 1600.0
 
 [node name="HealthUpdateTimer" type="Timer" parent="."]
@@ -69,7 +69,7 @@ autostart = true
 wait_time = 0.3
 autostart = true
 
-[node name="Footer" parent="." instance=ExtResource( 11 )]
+[node name="Footer" parent="." instance=ExtResource( 5 )]
 margin_left = 936.0
 margin_top = 792.0
 margin_right = 1379.0

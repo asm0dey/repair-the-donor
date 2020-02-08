@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://organ.gd" type="Script" id=1]
-[ext_resource path="res://organs/heart.png" type="Texture" id=3]
+[ext_resource path="res://scripts/organ.gd" type="Script" id=1]
+[ext_resource path="res://organs/heart.png" type="Texture" id=2]
 
 [node name="Heart" type="KinematicBody2D" groups=[
 "organs",
@@ -12,7 +12,7 @@ time_left = 200.0
 _name = "heart"
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false

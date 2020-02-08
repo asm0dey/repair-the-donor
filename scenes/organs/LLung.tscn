@@ -1,19 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://organs/llung.png" type="Texture" id=1]
-[ext_resource path="res://organ.gd" type="Script" id=2]
+[ext_resource path="res://scripts/organ.gd" type="Script" id=1]
+[ext_resource path="res://organs/llung.png" type="Texture" id=2]
+
 
 [node name="Left Lung" type="KinematicBody2D" groups=[
 "organs",
 ]]
 input_pickable = true
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 time_left = 200.0
 type = 1
 _name = "llung"
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false

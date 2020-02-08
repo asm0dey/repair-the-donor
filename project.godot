@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "BaseOrgan",
 "language": "GDScript",
-"path": "res://organ.gd"
+"path": "res://scripts/organ.gd"
 }, {
 "base": "OrganContainer",
 "class": "Bed",
 "language": "GDScript",
-"path": "res://bed.gd"
+"path": "res://scripts/bed.gd"
 }, {
 "base": "StaticBody2D",
 "class": "OrganContainer",
 "language": "GDScript",
-"path": "res://OrganContainer.gd"
+"path": "res://scripts/OrganContainer.gd"
 } ]
 _global_script_class_icons={
 "BaseOrgan": "",
@@ -33,12 +33,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Donor-trade"
-run/main_scene="res://StartScreen.tscn"
+run/main_scene="res://scenes/levels/StartScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-globals="*res://globals.gd"
+globals="*res://scripts/globals.gd"
 
 [display]
 
