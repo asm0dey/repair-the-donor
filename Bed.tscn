@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://bodies/man-dead.png" type="Texture" id=1]
 [ext_resource path="res://bed.gd" type="Script" id=2]
 [ext_resource path="res://bodies/man.png" type="Texture" id=3]
 [ext_resource path="res://bodies/man-happy.png" type="Texture" id=4]
 [ext_resource path="res://bodies/man-scared.png" type="Texture" id=5]
+[ext_resource path="res://Hepar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LKidney.tscn" type="PackedScene" id=7]
+[ext_resource path="res://RKidney.tscn" type="PackedScene" id=8]
+[ext_resource path="res://LLung.tscn" type="PackedScene" id=9]
+[ext_resource path="res://RLung.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Heart.tscn" type="PackedScene" id=11]
 
-[node name="Bed" type="StaticBody2D" groups=[
+[node name="Human" type="StaticBody2D" groups=[
 "beds",
 ]]
 input_pickable = true
@@ -39,5 +45,35 @@ texture = ExtResource( 5 )
 visible = false
 rotation = -0.0239658
 polygon = PoolVector2Array( -31.3626, 49.3738, -14.448, 62.6305, 4.18501, 65.1217, 17.0989, 62.5105, 31.9321, 52.9356, 35.9997, 41.6422, 36.6625, 26.1782, 42.3075, -26.5519, 36.9732, -47.7091, 27.8841, -58.4416, 19.8507, -64.4756, 2.05841, -65.4863, -16.0748, -64.4606, -27.863, -60.0699, -36.2602, -50.9249, -42.1773, -35.5868, -40.5348, -6.63212, -37.2967, 41.0535 )
+
+[node name="Heart" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3.8414, -26.9675 )
+scale = Vector2( 0.35, 0.35 )
+z_index = 5
+
+[node name="Left Lung" parent="." instance=ExtResource( 9 )]
+position = Vector2( 20.2911, -34.3204 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 5
+
+[node name="RLung" parent="." instance=ExtResource( 10 )]
+position = Vector2( -19, -34 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 5
+
+[node name="Hepar" parent="." instance=ExtResource( 6 )]
+position = Vector2( -10.0268, 6.48347 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 5
+
+[node name="LKidney" parent="." instance=ExtResource( 7 )]
+position = Vector2( -13.9911, 35.5319 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 5
+
+[node name="RKidney" parent="." instance=ExtResource( 8 )]
+position = Vector2( 17.1382, 35.5319 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 5
 [connection signal="mouse_entered" from="." to="." method="_on_Bed_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Bed_mouse_exited"]

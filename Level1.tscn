@@ -1,15 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
-[ext_resource path="res://Hepar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://floor.png" type="Texture" id=3]
-[ext_resource path="res://RKidney.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bed.tscn" type="PackedScene" id=6]
-[ext_resource path="res://RLung.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Heart.tscn" type="PackedScene" id=8]
-[ext_resource path="res://LKidney.tscn" type="PackedScene" id=9]
-[ext_resource path="res://LLung.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Footer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://bin.png" type="Texture" id=12]
 
@@ -19,11 +13,13 @@ script = ExtResource( 1 )
 [node name="HospitalFloor" type="Sprite" parent="."]
 position = Vector2( 880, 498 )
 scale = Vector2( 1.1, 1.1 )
+z_as_relative = false
 texture = ExtResource( 3 )
 
 [node name="bin" type="Sprite" parent="."]
 position = Vector2( 1504.43, 214.689 )
 scale = Vector2( 0.7, 0.7 )
+z_as_relative = false
 texture = ExtResource( 12 )
 
 [node name="Bed" parent="." groups=[
@@ -45,90 +41,6 @@ places = {
 }
 state = 1
 
-[node name="Heart" parent="." groups=[
-"b1",
-] instance=ExtResource( 8 )]
-position = Vector2( 226.968, 389.334 )
-scale = Vector2( 0.6, 0.6 )
-organ_name = "h1"
-
-[node name="Heart2" parent="." groups=[
-"b2",
-] instance=ExtResource( 8 )]
-position = Vector2( 608.015, 387.326 )
-scale = Vector2( 0.6, 0.6 )
-organ_name = "h1"
-
-[node name="LKidney" parent="." groups=[
-"b1",
-] instance=ExtResource( 9 )]
-position = Vector2( 188.068, 512.873 )
-scale = Vector2( 0.6, 0.6 )
-organ_name = "lk1"
-
-[node name="Left Lung" parent="." groups=[
-"b1",
-] instance=ExtResource( 10 )]
-position = Vector2( 259.843, 368.266 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="RLung" parent="." groups=[
-"b1",
-] instance=ExtResource( 7 )]
-position = Vector2( 178.087, 372.933 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="Hepar" parent="." groups=[
-"b1",
-] instance=ExtResource( 2 )]
-position = Vector2( 196.678, 455.022 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="RKidney" parent="." groups=[
-"b1",
-] instance=ExtResource( 4 )]
-position = Vector2( 250.792, 510.141 )
-scale = Vector2( 0.6, 0.6 )
-organ_name = ""
-
-[node name="LKidney2" parent="." groups=[
-"b2",
-] instance=ExtResource( 9 )]
-position = Vector2( 568.461, 509.381 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Left Lung2" parent="." groups=[
-"b2",
-] instance=ExtResource( 10 )]
-position = Vector2( 640.236, 365.774 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="RLung2" parent="." groups=[
-"b2",
-] instance=ExtResource( 7 )]
-position = Vector2( 558.48, 369.441 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="Hepar2" parent="." groups=[
-"b2",
-] instance=ExtResource( 2 )]
-position = Vector2( 577.071, 451.53 )
-scale = Vector2( 0.8, 0.8 )
-organ_name = ""
-
-[node name="RKidney2" parent="." groups=[
-"b2",
-] instance=ExtResource( 4 )]
-position = Vector2( 631.185, 506.649 )
-scale = Vector2( 0.6, 0.6 )
-state = 1
-organ_name = ""
-
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 margin_right = 1600.0
 
@@ -144,11 +56,13 @@ margin_left = 936.0
 margin_top = 792.0
 margin_right = 1379.0
 margin_bottom = 898.0
-[connection signal="organ_died" from="Heart" to="Bed" method="_on_Heart_organ_died"]
-[connection signal="organ_died" from="Heart2" to="Bed2" method="_on_Heart2_organ_died"]
 [connection signal="pressed" from="GUI/HBoxContainer/Bars/Bar/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
 [connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
+
+[editable path="Bed"]
+
+[editable path="Bed2"]
 
 [editable path="GUI"]
 

@@ -14,11 +14,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func count_alive_organs(bed_groups):
+func count_alive_organs(beds):
 	var alive_organs = 0
-	for group in bed_groups:
-		for obj in get_tree().get_nodes_in_group(group):
-			if obj is KinematicBody2D:
-				if obj.state != obj.State.DEAD:
-					alive_organs += 1
+	for bed in beds:
+		alive_organs += bed.organs.size()
 	return alive_organs

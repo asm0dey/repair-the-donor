@@ -37,14 +37,18 @@ func _process(_delta):
 		emit_signal('organ_died', self)
 		return
 	if dragging:
-		set_position(get_viewport().get_mouse_position())
+		
+		global_position = get_viewport().get_mouse_position()
+
 
 func _on_Organ_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			emit_signal("organ_taken", self, event)
 			container = null
+			z_index+=10
 			dragging = true
 		else:
 			emit_signal("organ_released", self, event)
+			z_index-=10
 			dragging = false

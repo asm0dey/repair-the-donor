@@ -12,12 +12,13 @@ func _process(_delta):
 		if organ.state != 0 and organ.time_left > 0:
 			organ.time_left -= decrement_per_iteration
 
-func _organ_taken(organ, _event):
+func _organ_taken(organ:KinematicBody2D, event):
 	if _mouse_in:
 		var i = organs.find(organ)
 		if i >= 0:
 			organs.remove(i)
 			print("organ " + organ.organ_name + " is got of " + container_name)
+#		organ.set_position(event.position)
 
 
 func _organ_released(organ, _event):
