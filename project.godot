@@ -8,9 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "BaseOrgan",
+"language": "GDScript",
+"path": "res://organ.gd"
+}, {
+"base": "OrganContainer",
+"class": "Bed",
+"language": "GDScript",
+"path": "res://bed.gd"
+}, {
+"base": "StaticBody2D",
+"class": "OrganContainer",
+"language": "GDScript",
+"path": "res://OrganContainer.gd"
+} ]
 _global_script_class_icons={
-
+"BaseOrgan": "",
+"Bed": "",
+"OrganContainer": ""
 }
 
 [application]

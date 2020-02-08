@@ -29,6 +29,14 @@ position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
 container_name = "Bed 1"
 state = 1
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
 
 [node name="Bed2" parent="." groups=[
 "b2",
@@ -39,6 +47,16 @@ container_name = "Bed 2"
 places = {
 
 }
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
+
+[node name="RKidney" parent="Bed2" index="10"]
 state = 1
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]

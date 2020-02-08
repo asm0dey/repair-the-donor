@@ -21,6 +21,14 @@ __meta__ = {
 "_edit_group_": true
 }
 size = 3
+organ_exists = {
+"HEART": true,
+"HEPAR": true,
+"LEFT_KIDNEY": true,
+"LEFT_LUNG": true,
+"RIGHT_KIDNEY": true,
+"RIGHT_LUNG": true
+}
 
 [node name="SpriteNeutral" type="Sprite" parent="."]
 scale = Vector2( 0.4, 0.4 )
@@ -50,30 +58,36 @@ polygon = PoolVector2Array( -31.3626, 49.3738, -14.448, 62.6305, 4.18501, 65.121
 position = Vector2( 3.8414, -26.9675 )
 scale = Vector2( 0.35, 0.35 )
 z_index = 5
+z_as_relative = false
 
 [node name="Left Lung" parent="." instance=ExtResource( 9 )]
 position = Vector2( 20.2911, -34.3204 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 5
+z_as_relative = false
 
 [node name="RLung" parent="." instance=ExtResource( 10 )]
 position = Vector2( -19, -34 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 5
+z_as_relative = false
 
 [node name="Hepar" parent="." instance=ExtResource( 6 )]
 position = Vector2( -10.0268, 6.48347 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 5
+z_as_relative = false
 
 [node name="LKidney" parent="." instance=ExtResource( 7 )]
 position = Vector2( -13.9911, 35.5319 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 5
+z_as_relative = false
 
 [node name="RKidney" parent="." instance=ExtResource( 8 )]
 position = Vector2( 17.1382, 35.5319 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 5
+z_as_relative = false
 [connection signal="mouse_entered" from="." to="." method="_on_Bed_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Bed_mouse_exited"]
