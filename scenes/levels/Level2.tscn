@@ -71,19 +71,6 @@ organ_exists = {
 margin_left = 0.0
 margin_right = 1600.0
 
-[node name="HBoxContainer" parent="GUI" index="0"]
-margin_right = 1580.0
-
-[node name="Bars" parent="GUI/HBoxContainer" index="0"]
-margin_right = 1428.0
-
-[node name="Bar" parent="GUI/HBoxContainer/Bars" index="0"]
-margin_right = 1428.0
-
-[node name="Counters" parent="GUI/HBoxContainer" index="1"]
-margin_left = 1432.0
-margin_right = 1560.0
-
 [node name="Footer" parent="." instance=ExtResource( 11 )]
 margin_left = 0.0
 margin_top = 784.0
@@ -96,7 +83,7 @@ autostart = true
 [node name="OrganCountUpdateTimer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
-[connection signal="pressed" from="GUI/HBoxContainer/Bars/Bar/Button" to="." method="_on_Button_pressed"]
+[connection signal="next_level" from="GUI" to="." method="_on_next_level"]
 [connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
 [connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
 
@@ -105,7 +92,3 @@ autostart = true
 [editable path="Bed2"]
 
 [editable path="Bed3"]
-
-[editable path="GUI"]
-
-[editable path="GUI/HBoxContainer/Bars/Bar"]

@@ -27,6 +27,8 @@ texture = ExtResource( 3 )
 ] instance=ExtResource( 4 )]
 position = Vector2( 216.938, 441.318 )
 scale = Vector2( 2, 2 )
+container_name = "Bed 1"
+state = 1
 organ_exists = {
 "HEART": true,
 "HEPAR": true,
@@ -35,14 +37,16 @@ organ_exists = {
 "RIGHT_KIDNEY": true,
 "RIGHT_LUNG": true
 }
-container_name = "Bed 1"
-state = 1
 
 [node name="Bed2" parent="." groups=[
 "b2",
 ] instance=ExtResource( 4 )]
 position = Vector2( 597.331, 437.826 )
 scale = Vector2( 2, 2 )
+container_name = "Bed 2"
+places = {
+
+}
 organ_exists = {
 "HEART": true,
 "HEPAR": true,
@@ -50,10 +54,6 @@ organ_exists = {
 "LEFT_LUNG": true,
 "RIGHT_KIDNEY": true,
 "RIGHT_LUNG": true
-}
-container_name = "Bed 2"
-places = {
-
 }
 
 [node name="RKidney" parent="Bed2" index="10"]
@@ -74,14 +74,10 @@ margin_left = 936.0
 margin_top = 792.0
 margin_right = 1379.0
 margin_bottom = 898.0
-[connection signal="pressed" from="GUI/HBoxContainer/Bars/Bar/Button" to="." method="_on_Button_pressed"]
+[connection signal="next_level" from="GUI" to="." method="_on_next_level"]
 [connection signal="timeout" from="HealthUpdateTimer" to="." method="_on_HealthUpdateTimer_timeout"]
 [connection signal="timeout" from="OrganCountUpdateTimer" to="." method="_on_OrganCountUpdateTimer_timeout"]
 
 [editable path="Bed"]
 
 [editable path="Bed2"]
-
-[editable path="GUI"]
-
-[editable path="GUI/HBoxContainer/Bars/Bar"]

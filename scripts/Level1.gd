@@ -33,17 +33,18 @@ func _on_HealthUpdateTimer_timeout():
 	current_time_left = current_time_left - time_step
 	adjust_timer()
 
-func _on_Button_pressed():
-	if $Bed.state != $Bed.State.DEAD:
-		globals.score += 500
-		
-	if $Bed2.state != $Bed2.State.DEAD:
-		globals.score += 500
-	
-	get_tree().change_scene("res://scenes/levels/Level2.tscn")
-
 
 func _on_OrganCountUpdateTimer_timeout():
 	var num_alive_organs = globals.count_alive_organs(get_tree().get_nodes_in_group("beds"))
 	$GUI/HBoxContainer/Counters/Counter/Background/Number.text = "%s" % num_alive_organs
 
+
+
+func _on_next_level():
+	for t in get_tree().get_nodes_in_group("beds"):
+		var bed: Bed = t
+		if bed.state != Bed.State.DEAD:
+			globals.score += 500
+	
+	get_tree().current_scene.queue_free()
+	get_tree().change_scene("res://scenes/levels/Level2.tscn")
